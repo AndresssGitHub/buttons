@@ -1,0 +1,14 @@
+---
+const { text = "Ok", red = false } = Astro.props
+---
+<button class="bg-blue-500 rounded-full px-10 py-2 mx-auto flex justify-center text-white font-semibold shadow-lg hover:bg-green-600 mt-6 transition-colors"
+
+class:list={[{"bg-red-500 hover:bg-red-700":red}]}
+>
+
+    <slot name="icon"/>
+    { text }
+    <slot name="message"/>
+</button>
+
+
